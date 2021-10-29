@@ -1,0 +1,30 @@
+<!DOCTYPE html5>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice JS 3_2</title>
+   
+</head>
+
+<body>
+  <div id="nombre"></div>
+  <script>
+  const nombre = document.getElementById("i")
+  let i = 1;
+     for (i; i <= 100; i++)
+      {
+        if (Number.isInteger ( i/15 )) {
+         i.innerHTML = `<p>...</p>`;
+         console.log("...")
+         }
+        else {
+          i.innerHTML = `<p>${i}</p>`;
+          console.log(i)
+         }
+      }   
+  </script>
+</body>
+</html>

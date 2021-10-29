@@ -18,8 +18,9 @@
   <div id="year"></div>
 <script>
   const annee = document.getElementById("year")
-  let year = 2020;
+  let year = 2019;
     do {
+      year = year + 1
       if (Number.isInteger(year / 4))
             {
             annee.innerHTML = `<p class="red">${year}</p>`;
@@ -27,33 +28,20 @@
       else {
         annee.innerHTML = `<p>${year}</p>`;
             }
-      annee.innerHTML += `<p>${year}</p>`;
-       }
-    while (year = 2030);
-
-    For (i; i <= 2030; i++)
-    {
-      console.log
-      annee.innerHTML += `<p>${year}</p>`
-      if (i == 2024) {
-        annee.innerHTML += `<p>${year} - vert </p>`
-      } else {
-        annee.innerHTML += `<p>${year}</p>`
-      }
     }
-    
-
-
-
-
-
-
-
-
-
-
-
-
+    while (year = 2030);
+       
+    // For (i; i <= 2030; i++)
+    // {
+      // console.log
+      // annee.innerHTML += `<p>${year}</p>`
+      // if (i == 2024) {
+        // annee.innerHTML += `<p>${year} - vert </p>`
+      // } else {
+        // annee.innerHTML += `<p>${year}</p>`
+      // }
+    // }
+   
 </script>
 </body>
 </html>
