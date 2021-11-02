@@ -17,17 +17,19 @@
 <body>
   <div id="year"></div>
 <script>
-  const annee = document.getElementById("year")
-  let year = 2019;
+  const d1 = document.getElementById("year")
+  let year = 2020;
     do {
-      year = year + 1
-      if (Number.isInteger(year / 4))
+      // si l'année est divisible par 4 et non divisible 100
+      // si l'année est divisible par 400
+            if ((Number.isInteger(year / 4) && year % 100 !=0) || Number.isInteger (year / 400))
             {
-            annee.innerHTML = `<p class="red">${year}</p>`;
+            d1.innerHTML = `<p class="red">${year}</p>`;
             }
       else {
-        annee.innerHTML = `<p>${year}</p>`;
+        d1.innerHTML = `<p>${year}</p>`;
             }
+            year = year + 1
     }
     while (year = 2030);
        

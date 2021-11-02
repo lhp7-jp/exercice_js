@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4_4</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <img id="image0" src=""assets/img/la-nuit-etoilee.jpg" alt="La nuit étoilée - V. VAN GOGH" " onclick="changeImage(this);" /> 
+  <script>
+   function changeImage(element)
+{
+  let x = element.getElementsByTagName("img").item(0);
+  let v = x.getAttribute("src");
+  if{(v == "feed-blue.png")
+    v = "feed-orange.png");}
+  else
+    v = "feed-blue.png");
+  x.setAttribute("src", v);	
+}
+
+</script>
+</body>
+</html>

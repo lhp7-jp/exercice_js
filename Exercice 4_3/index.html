@@ -1,0 +1,45 @@
+<!DOCTYPE html5>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice JS 4_3</title>
+</head>
+
+<body>
+    
+  <div class="container">
+  <Form>
+    <div>
+      <label for="nb1">Nombre 1</label>
+      <input type="text" id="nb1">
+    </div>
+    <div>
+      <label for="nb2">Nombre 2</label>
+      <input type="text" id="nb2">
+    </div>
+    <div>
+      <label for="result">Résultat</label>
+      <input type="text" id="result">
+    </div>
+    <button id="button" type="button" class="btn btn-primary m-2" onclick="multiply()">Multiplier</button>
+    <button id="raz" type="button" class="btn btn-primary m-2" onclick="multiply()">RAZ</button>
+  </Form>
+</div>
+
+<script>
+  document.getElementById("button").onclick = () => {
+  let nb1 = document.getElementById("nb1").value
+  let nb2 = document.getElementById("nb2").value
+  result.value=(nb1*nb2)
+}  
+document.getElementById("raz").onclick = () => {
+    document.getElementById('nb1').value="";
+    document.getElementById('nb2').value="";
+    document.getElementById("result").value="";
+}  
+</script>
+  </body>
+</html>
