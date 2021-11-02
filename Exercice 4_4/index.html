@@ -7,19 +7,12 @@
 </head>
 
 <body>
-  <img id="image0" src=""assets/img/la-nuit-etoilee.jpg" alt="La nuit étoilée - V. VAN GOGH" " onclick="changeImage(this);" /> 
-  <script>
-   function changeImage(element)
-{
-  let x = element.getElementsByTagName("img").item(0);
-  let v = x.getAttribute("src");
-  if{(v == "feed-blue.png")
-    v = "feed-orange.png");}
-  else
-    v = "feed-blue.png");
-  x.setAttribute("src", v);	
-}
+  <img id = "vanGogh" src="assets/img/la-nuit-etoilee.jpg" alt="La nuit étoilée - V. VAN GOGH" /> 
 
-</script>
+  <script>
+   const xvanGogh = document.getElementById('vanGogh')
+   xvanGogh.onclick = () => xvanGogh.classList.toggle('maxImg')
+  </script>
 </body>
 </html>
+ 
