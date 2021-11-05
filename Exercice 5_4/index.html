@@ -22,12 +22,12 @@
 
     function changeimg() {
       if (cpt == 0) {
-      document.getElementById("myImg").src = "assets/img/Noyon.png";
-      cpt = cpt + 1;
+        document.getElementById("myImg").src = "assets/img/Noyon.png";
+        cpt = cpt + 1;
       }
-    else {
-      document.getElementById("myImg").src = "assets/img/logo_la_manu_formation_400.png";
-      cpt = 0;
+      else {
+        document.getElementById("myImg").src = "assets/img/logo_la_manu_formation_400.png";
+        cpt = 0;
       }
     }
 
@@ -35,7 +35,7 @@
       let myImg = document.getElementById("myImg");
       let width = myImg.clientWidth;
       if (width == 600) {
-      diminuer();
+        diminuer();
       }
       else {
         myImg.style.width = (width + 20) + "px";
@@ -47,13 +47,15 @@
       let width = myImg.clientWidth;
       if (width == 40) {
         alert("Vous avez atteint le niveau de zoom minimal.");
-      } else {
+      }
+      else if (width > 40) {
         myImg.style.width = (width - 20) + "px";
+      }
+      else {
+        console.log("");
       }
     }
   </script>
-
-
 
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->
