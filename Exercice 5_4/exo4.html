@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 4</title>
+</head>
+
+<body>
+
+  <img src="soleil.jpeg.jpg" alt="soleil" id="image">
+
+
+    <script>
+        let myImage = document.getElementById("image")
+        console.log(myImage);
+
+        myImage.addEventListener("click", function (event) {
+            
+           
+            myImage.src="nuageux.jpg"; 
+            console.log(myImage);
+
+        })
+
+
+        myImage.addEventListener("mouseover", function(){ //ou mouseenter
+            myImage.style.height ="200px";
+        })
+        myImage.addEventListener("mouseout", function(){ // ou mouseleave
+            myImage.style.height ="";
+        })
+    </script>
+
+</body>
+
+</html>

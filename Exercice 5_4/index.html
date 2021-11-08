@@ -14,11 +14,23 @@
 
 <body>
 
-  <img src="assets/img/logo_la_manu_formation_400.png" id="myImg" onmouseover="agrandir()" onclick="changeimg()">;
-
+  <img src="assets/img/logo_la_manu_formation_400.png" id="myImg">;
 
   <script>
     let cpt = 0;
+    let myImage = document.getElementById(myImg);
+    myImage.addEventListener("click", function (event) {
+      console.log(event);
+      myImage.src = "assets/img/Noyon.png"
+       });
+
+    myImage.addEventListener("mouseover", function() {
+      myImage.style.height="200px";
+    });
+
+    myImage.addEventListener("mouseout", function() {
+      myImage.style.height="";
+    });
 
     function changeimg() {
       if (cpt == 0) {

@@ -14,36 +14,54 @@
 
 <body>
 
-  <img src="assets/img/logo_la_manu_formation_400.png" id="myImg">;
-
-  <div id="myDiv"><p>
-    Python est un langage de programmation interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet. Il est doté d'un typage dynamique fort, d'une gestion automatique de la mémoire par ramasse-miettes et d'un système de gestion d'exceptions ; il est ainsi similaire à Perl, Ruby, Scheme, Smalltalk et Tcl. Le langage Python est placé sous une licence libre proche de la licence BSD et fonctionne sur la plupart des plates-formes informatiques, des smartphones aux ordinateurs centraux, de Windows à Unix avec notamment GNU/Linux en passant par macOS, ou encore Android, iOS, et peut aussi être traduit en Java ou .NET. Il est conçu pour optimiser la productivité des programmeurs en offrant des outils de haut niveau et une syntaxe simple à utiliser.
-    Il est également apprécié par certains pédagogues qui y trouvent un langage où la syntaxe, clairement séparée des mécanismes de bas niveau, permet une initiation aisée aux concepts de base de la programmation.
-  </p>
+  <div id="myDiv">
+    <p>
+      Python est un langage de programmation interprété, multi-paradigme et multiplateformes. Il favorise la
+      programmation impérative structurée, fonctionnelle et orientée objet. Il est doté d'un typage dynamique fort,
+      d'une gestion automatique de la mémoire par ramasse-miettes et d'un système de gestion d'exceptions ; il est ainsi
+      similaire à Perl, Ruby, Scheme, Smalltalk et Tcl. Le langage Python est placé sous une licence libre proche de la
+      licence BSD et fonctionne sur la plupart des plates-formes informatiques, des smartphones aux ordinateurs
+      centraux, de Windows à Unix avec notamment GNU/Linux en passant par macOS, ou encore Android, iOS, et peut aussi
+      être traduit en Java ou .NET. Il est conçu pour optimiser la productivité des programmeurs en offrant des outils
+      de haut niveau et une syntaxe simple à utiliser.
+      Il est également apprécié par certains pédagogues qui y trouvent un langage où la syntaxe, clairement séparée des
+      mécanismes de bas niveau, permet une initiation aisée aux concepts de base de la programmation.
+    </p>
   </div>
 
-  <button type="button" class="btn btn-success" id = "Rose" onclick="changestylecolor()">Rose</button>
-  <button type="button" class="btn btn-success" onclick="changestylecolor(Blue)">Bleu</button>
-  <button type="button" class="btn btn-success" onclick="changestylecolor(Violet)">Violet</button>
-  <button type="button" class="btn btn-success" onclick="changestyle(Gras)">Gras</button>
-  <button type="button" class="btn btn-success" onclick="changestyle(Italique)">Italique</button>
+  <button type="button" class="btn btn-success" id="pink" onclick="changestylecolor(pink)">Rose</button>
+  <button type="button" class="btn btn-success" id="blue" onclick="changestylecolor(Blue)">Bleu</button> -->
+  <button type="button" class="btn btn-success" id="purple" onclick="changestylecolor(purple)">Violet</button> -->
+  <button type="button" class="btn btn-success" id="bold" onclick="changestyle(bold)">Gras</button> -->
+  <button type="button" class="btn btn-success" id="italic" onclick="changestyle(italic)">Italique</button> -->
 
   <script>
-    let text = document.getElementById("myDiv").textContent;
-    let inter = "";
-    let Rose = "Pink";
-    let Bleu = "Blue";
-    let violet = "violet"
-    let Gras = "bold"
-    let Italique = "italic"
-    console.log(text);
-    
-     function changestylecolor(chcolor) {
-       inter = chcolor.value;
-       console.log(chcolor);
-       
-       //elts[1].style.color = 'red';
-    }
+    let myButton = document.querySelector("body,button");
+    myButton.addEventListener("click", function (event) {
+      let idButton = event.srcElement.id;
+      let myDiv = document.getElementById("myDiv");
+      if (idButton == "bold") {
+        myDiv.style.fontWeight = idButton;
+      }
+      else{ 
+        if (idButton == "italic") {
+          myDiv.style.fontStyle = idButton;
+        }
+        else {
+          myDiv.style.color = idButton;
+          console.log(idButton);
+          console.log(event);
+          document.getElementById(idButton).style.color = idButton;
+          array.from(document.getElementsByTagName("button")).map(b => b.style.color = idButton);
+          }
+        }
+      });
+
+    function changestylecolor() {
+    };
+
+    function changestyle() {
+    };
   </script>
 
   <!-- Optional JavaScript; choose one of the two! -->

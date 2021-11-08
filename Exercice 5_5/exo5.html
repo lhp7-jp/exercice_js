@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 5</title>
+</head>
+
+<body>
+  <p id="myText">
+    Python est un langage de programmation interprété, multi-paradigme et multiplateformes. Il favorise la programmation
+    impérative structurée, fonctionnelle et orientée objet. Il est doté d'un typage dynamique fort, d'une gestion
+    automatique de la mémoire par ramasse-miettes et d'un système de gestion d'exceptions ; il est ainsi similaire à
+    Perl, Ruby, Scheme, Smalltalk et Tcl. Le langage Python est placé sous une licence libre proche de la licence BSD et
+    fonctionne sur la plupart des plates-formes informatiques, des smartphones aux ordinateurs centraux, de Windows à
+    Unix avec notamment GNU/Linux en passant par macOS, ou encore Android, iOS, et peut aussi être traduit en Java ou
+    .NET. Il est conçu pour optimiser la productivité des programmeurs en offrant des outils de haut niveau et une
+    syntaxe simple à utiliser.
+    Il est également apprécié par certains pédagogues qui y trouvent un langage où la syntaxe, clairement séparée des
+    mécanismes de bas niveau, permet une initiation aisée aux concepts de base de la programmation.
+  </p>
+  <button type="button" id="pink">Rose</button>
+  <button type="button" id="blue">Bleu</button>
+  <button type="button" id="purple">Violet</button>
+  <button type="button" id="bold">Gras</button>
+  <button type="button" id="italic">Italique</button>
+  <button type="button" id="green">Vert</button>
+
+
+  <script>
+    const change = (event) => {
+      if (event.target.nodeName == "BUTTON") {
+        // console.log("toto")
+
+        let idButton = event.target.id;
+        // console.log(idButton)
+
+        if (idButton == "bold") {
+          document.getElementById("myText").style.fontWeight = "bold" // ou idButton
+        } else if (idButton == "italic") {
+          document.getElementById("myText").style.fontStyle = "italic"
+        } else {
+          document.getElementById("myText").style.color = idButton;
+          document.getElementById(idButton).style.color = idButton;
+          Array.from(document.getElementsByTagName("button")).map(b => b.style.color = idButton);
+        }
+
+      }
+    }
+    window.addEventListener("click", change);
+
+    // let myButton = document.querySelector("body,button")
+
+    // myButton.addEventListener("click", function(event){
+    //   let idButton = event.srcElement.id;
+
+    //   let myText = document.getElementById("myText");
+    //   myText.style.color = idButton;
+
+    //   console.log(idButton);
+
+    // })
+
+    // let myText = document.getElementById("myText")
+    // let pink = document.getElementById("pink")
+    // let blue = document.getElementById("blue")
+    // let purple = document.getElementById("purple")
+    // let bold = document.getElementById("bold")
+    // let italic = document.getElementById("italic")
+
+
+    // function change(element) {
+    //   myText.style.color = element
+    //   pink.style.color = element
+    //   blue.style.color = element
+    //   purple.style.color = element
+    //   bold.style.color = element
+    //   italic.style.color = element
+
+    // }
+
+
+
+    // function pinkColor() {
+    //   myText.style.color = "pink"
+    //   pink.style.color = "pink"
+    //   blue.style.color = "pink"
+    //   purple.style.color = "pink"
+    //   bold.style.color = "pink"
+    //   italic.style.color = "pink"
+
+    // }
+
+    // function blueColor() {
+    //   myText.style.color = "blue"
+    //   pink.style.color = "blue"
+    //   blue.style.color = "blue"
+    //   purple.style.color = "blue"
+    //   bold.style.color = "blue"
+    //   italic.style.color = "blue"
+
+    // }
+
+    // function purpleColor(){
+    //   myText.style.color = "purple"
+    //   pink.style.color = "purple"
+    //   blue.style.color = "purple"
+    //   purple.style.color = "purple"
+    //   bold.style.color = "purple"
+    //   italic.style.color = "purple"
+    // }
+
+    // function boldStyle(){
+    //   myText.style.fontWeight = "bold"
+    //   pink.style.fontWeight = "bold"
+    //   blue.style.fontWeight = "bold"
+    //   purple.style.fontWeight = "bold"
+    //   bold.style.fontWeight = "bold"
+    //   italic.style.fontWeight = "bold"
+    // }
+
+    // function italicStyle(){
+    //   myText.style.fontStyle = "italic"
+    //   pink.style.fontStyle = "italic"
+    //   blue.style.fontStyle = "italic"
+    //   purple.style.fontStyle = "italic"
+    //   bold.style.fontStyle = "italic"
+    //   italic.style.fontStyle = "italic"
+    // }
+  </script>
+</body>
+
+</html>
