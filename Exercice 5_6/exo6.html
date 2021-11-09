@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/style.css" rel="stylesheet" />
+    <title>Exo 6</title>
+
+    <style>
+
+        input {
+            border: 0px;
+            outline: none;
+
+        }
+        .border {
+
+            border: 1px solid black;
+        }
+
+        .borderBold {
+            border: 5px solid black;
+        }
+
+        div {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <form method="POST" action="#">
+        <fieldset>
+
+
+            <div><label for="name">Nom </label><input type="text" name="name" id="name" placeholder="Nom"
+                    class="border" />
+            </div>
+
+            <div><label for="email">Email </label><input type="email" name="email" id="email" placeholder="email"
+                    class="border" required /></div>
+
+            <div><label for="age">Age </label><input type="text" id="age" name="age" placeholder="Age" class="border" />
+            </div>
+
+            <button type="button" value="valider" id="button">Valider</button>
+        </fieldset>
+    </form>
+
+
+    <script>
+        const name = document.querySelector('input[name="name"]');
+
+        name.addEventListener('focus', (event) => {
+            name.classList.remove("border");
+            name.classList.add("borderBold")
+        });
+
+        name.addEventListener('blur', (event) => {
+            name.classList.add("border");
+            name.classList.remove("borderBold");
+        });
+
+
+        const email = document.querySelector('input[name="email"]');
+
+        email.addEventListener('focus', (event) => {
+            email.classList.add("borderBold");
+        });
+
+        email.addEventListener('blur', (event) => {
+            email.classList.remove("borderBold");
+        });
+
+
+        const age = document.querySelector('input[name="age"]');
+
+        age.addEventListener('focus', (event) => {
+            age.classList.add("borderBold")
+        });
+
+        age.addEventListener('blur', (event) => {
+            age.classList.remove("borderBold");
+        });
+
+
+     
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form method="POST" action="#">
+        <fieldset>
+
+            <button type="button" onclick="duplicate()" id="button">+</button>
+
+            <div id="principal">
+                <div> 
+                    <label for="name">Nom </label>
+                    <input type="text" name="name" id="name" placeholder="Nom">
+                </div>
+                <div>
+                    <label for="age">Age </label>
+                    <input type="text" id="age" name="age" placeholder="Age">
+                </div>
+            </div>
+           
+        </fieldset>
+    </form>
+
+    <script>
+        var i = 0;
+        var myPrincipal = document.getElementById("principal");
+
+        function duplicate() {
+            var clone = myPrincipal.cloneNode(true);
+            clone.id = "principalClone" + ++i;
+            console.log(clone)
+            myPrincipal.parentNode.appendChild(clone);
+            document.querySelector(clone.id + 'input[name="name"]').id = ""
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

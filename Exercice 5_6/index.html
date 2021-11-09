@@ -3,65 +3,89 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="assets/css/style.css" rel="stylesheet" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="assets/css/style.css" rel="stylesheet" /> -->
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" -->
+    <!-- integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
   <title>Exercice 5_6</title>
   <style>
 
-    Input {
+    input {
       border: 0px;
       outline: none;
     }
-    .border_std {
-      border : 1px solid black;
+
+    .border {
+      border: 1px solid black;
     }
-    .border_focus {
-      border : 5px solid red;
-      background-color : pink;
+
+    .borderBold {
+      border: 5px solid black;
+      background-color: pink;
     }
 
     div {
       margin: 10 px;
     }
   </style>
-
 </head>
 
 <body>
 
-  <form action="#" method="post">
+  <form action="#" method="POST">
     <fieldset>
-    <div>
-        <label for="name">Nom :  </label>
-        <input type="text" id="name" name="user_name" placeholder="Nom" class= "border" >
-    </div>
-    <div>
-        <label for="mail">E-mail :</label>
-        <input type="email" id="mail" name="user_mail" placeholder="E-mail" class= "border">
-    </div>
-    <div>
-        <label for="msg">Age :</label>
-        <input id="age" name="user_message>" placeholder="Age" class= "border">
-    </div>
+      <div>
+        <label for="name">Nom : </label>
+        <input type="text" id="name" name="user_name" placeholder="Nom" class="border">
+      </div>
+      <div>
+        <label for="email">E-mail :</label>
+        <input type="email" id="email" name="email" placeholder="email" class="border" required>
+      </div>
+      <div>
+        <label for="age">Age :</label>
+        <input id="age" name="age>" placeholder="age" class="border">
+      </div>
 
-    <button type="button" value="valider" id="button">valider</button>
-  </fieldset>
+      <button type="button" value="valider" id="button">Valider</button>
+    </fieldset>
   </form>
 
   <script>
-   const name = document.querySelector('input[name="name"]');
-   name.addEventListener('focus', (event) => { 
-    //  event.target.style.border = '5px solid black'
-    name.classlist.add("border_focus")
-   });
+    const name = document.querySelector('input[name="name"]');
+    name.addEventListener('focus', (event) => {
+      //  event.target.style.border = '5px solid black'
+      name.classList.remove("border");
+      name.classlist.add("borderBold");
+    });
 
-   name.addEventListener('blur', (event) => {
-    // event.target.style.border = '1px solid black'
-    name.classlist.remove("border_std")
-   });
+    name.addEventListener('blur', (event) => {
+      // event.target.style.border = '1px solid black'
+      name.classList.add("border");
+      name.classlist.remove("border");
+    });
+    const email = document.querySelector('input[name="email"]');
+
+    email.addEventListener('focus', (event) => {
+      email.classList.add("borderBold");
+    });
+
+    email.addEventListener('blur', (event) => {
+      email.classList.remove("borderBold");
+    });
+
+
+    const age = document.querySelector('input[name="age"]');
+
+    age.addEventListener('focus', (event) => {
+      age.classList.add("borderBold")
+    });
+
+    age.addEventListener('blur', (event) => {
+      age.classList.remove("borderBold");
+    });
 
   </script>
 
@@ -76,5 +100,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   -->
 </body>
-
 </html>
